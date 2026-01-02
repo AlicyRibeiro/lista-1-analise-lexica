@@ -1,3 +1,3 @@
-# Questão 2 – Linguagens que não são Regulares
+# Questão 4 – Conversão de Expressões Regulares para NFA
 
-Explique por que não é surpreendente que **não exista expressão regular** que defina cada uma das linguagens a seguir.
+Converta as expressões regulares a seguir em **autômatos finitos não determinísticos (NFA)**.
