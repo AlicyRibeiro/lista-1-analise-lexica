@@ -1,3 +1,3 @@
-# Questão 2 – Linguagens que não são Regulares
+# Questão 3 – Linguagem Reconhecida por Autômatos
 
-Explique por que não é surpreendente que **não exista expressão regular** que defina cada uma das linguagens a seguir.
+Explique, em linguagem informal, o que cada autômato reconhece.
