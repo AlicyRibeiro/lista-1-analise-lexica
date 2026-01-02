@@ -1,3 +1,3 @@
-# Questão 2 – Linguagens que não são Regulares
+# Questão 6 – Alfabeto de Linguagens de Programação
 
-Explique por que não é surpreendente que **não exista expressão regular** que defina cada uma das linguagens a seguir.
+Determine o **alfabeto** das seguintes linguagens de programação.
