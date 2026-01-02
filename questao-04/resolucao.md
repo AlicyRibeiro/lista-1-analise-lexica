@@ -12,7 +12,7 @@
 
 ### NFA para a expressão `(if | then | else)`
 
-![NFA para (if | then | else)](figuras/alternativa%20a).png)
+![NFA para (if | then | else)](figuras/alternativa-a-etapa-1.png)
 
 ---
 
@@ -34,4 +34,4 @@
 
 ### DFA obtido pelo algoritmo de subconjuntos
 
-![DFA para (if | then | else)](figuras/alternativa%20a)%20part2.png)
+![DFA para (if | then | else)](figuras/alternativa-a-etapa-2.png)
