@@ -191,4 +191,104 @@ por autômatos finitos (NFA ou DFA).
 ## f) Números binários `n` tais que existe solução inteira para  
 `aⁿ + bⁿ = cⁿ`
 
-> *(A definir)*
+### f) Números binários `n` tais que existe solução inteira para  
+`aⁿ + bⁿ = cⁿ`
+
+Deseja-se determinar o conjunto de valores de `n` (representados em binário)
+para os quais a equação
+
+\[
+a^n + b^n = c^n
+\]
+
+possui solução inteira não trivial (isto é, com `a`, `b` e `c` inteiros não nulos).
+
+---
+
+### Fundamentação teórica
+
+Esse problema está diretamente relacionado ao **Último Teorema de Fermat**, que afirma:
+
+> Para todo inteiro `n > 2`, **não existem** inteiros positivos `a`, `b` e `c`
+> tais que  
+> \[
+> a^n + b^n = c^n
+> \]
+
+Esse teorema foi demonstrado por **Andrew Wiles**, em 1994.
+
+---
+
+### Análise dos casos
+
+- **n = 1**  
+  A equação é linear:
+  \[
+  a + b = c
+  \]
+  Possui infinitas soluções inteiras.
+
+- **n = 2**  
+  A equação:
+  \[
+  a^2 + b^2 = c^2
+  \]
+  possui soluções inteiras conhecidas como **triplas pitagóricas**
+  (ex.: `3² + 4² = 5²`).
+
+- **n ≥ 3**  
+  Pelo Último Teorema de Fermat, **não existem soluções inteiras não triviais**.
+
+---
+
+### Conclusão
+
+Os únicos valores de `n` para os quais existe solução inteira são:
+
+\[
+n \in \{1, 2\}
+\]
+
+Representando esses valores em **binário**, obtemos:
+
+- `1` → `1₂`
+- `2` → `10₂`
+
+---
+
+### Linguagem reconhecida
+
+A linguagem consiste exatamente nas strings binárias que representam os valores
+`1` e `2`.
+
+\[
+L = \{1, 10\}
+\]
+
+---
+
+### Expressão regular
+
+```
+1 | 10
+```
+
+### Exemplos
+
+#### Strings válidas:
+
+- 1
+- 10
+
+#### Strings inválidas:
+
+- 0
+- 11
+- 100
+- 101
+
+### Observação
+
+Embora a equação envolva conceitos matemáticos profundos, a linguagem resultante
+é finita e, portanto, regular, podendo ser descrita trivialmente por
+uma expressão regular ou por um autômato finito simples.
