@@ -60,7 +60,7 @@ O repositório está organizado da seguinte forma:
 
 
 ##  Autora
-- Ana Alicy Ribeiro
+- Ana A. Ribeiro
 - Engenharia de Computação – UFC Quixadá
 
 ## ⚠️ Este repositório tem fins educacionais, sendo destinado ao estudo e à prática dos conceitos de Compiladores e Análise Léxica.
