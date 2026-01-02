@@ -1,6 +1,9 @@
 
 ## a) Autômato com alfabeto `{0, 1}`
 
+![autômato](figuras/alternativa-a-etapa-1.png)
+
+---
 A linguagem reconhecida por esse autômato consiste em **strings binárias que contêm uma subcadeia de 4 símbolos consecutivos** que permite a transição completa pelos estados do autômato até um estado final.
 
 Em outras palavras, o autômato aceita cadeias que possuem **quatro símbolos consecutivos** formando um padrão válido de transições.
