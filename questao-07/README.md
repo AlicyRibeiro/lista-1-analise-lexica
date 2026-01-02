@@ -1,3 +1,3 @@
-# Questão 2 – Linguagens que não são Regulares
+# Questão 7 – Formas Léxicas de Identificadores e Palavras-Chave
 
-Explique por que não é surpreendente que **não exista expressão regular** que defina cada uma das linguagens a seguir.
+Especifique as **formas léxicas** de alguns identificadores e palavras-chave das linguagens apresentadas no Exercício 6.
