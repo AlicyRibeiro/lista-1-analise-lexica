@@ -74,16 +74,117 @@
 
 ## d) Números binários maiores que `101001`
 
+Deseja-se definir, por meio de uma expressão regular, o conjunto de números binários
+que representam valores **estritamente maiores** que `101001`.
+
+O número `101001₂` possui **6 bits**. Para realizar a comparação, consideramos dois casos
+principais:
+
+### 1. Números com mais de 6 bits
+Em representação binária sem zeros à esquerda, **qualquer número com mais de 6 bits**
+é automaticamente maior que `101001`.  
+Assim, todas as strings binárias que começam com `1` e possuem **7 ou mais bits**
+pertencem à linguagem.
+
+### 2. Números com exatamente 6 bits
+Para strings de mesmo comprimento, a comparação é feita **bit a bit**, da esquerda
+para a direita, de forma lexicográfica:
+
+- Se o prefixo for `1011`, o número já é maior que `101001`, pois difere no quarto bit.
+- Se o prefixo for `10101`, o número permanece igual até o quinto bit e será maior
+  independentemente do valor do último bit.
+
+Strings exatamente iguais a `101001` **não** são incluídas, pois o problema exige valores
+estritamente maiores.
+
+
 ### Expressão regular
 
-`10101[01]* | 1011[01]* | 11[01]*`
+``
+(1011|10101)[01]* | 1[01]{6,} ``
 
+### Exemplos
+
+#### Strings válidas:
+
+- 101010   (42)
+- 101100   (44)
+- 110000   (48)
+- 1111111  (127)
+
+
+##### Strings inválidas:
+
+- 101001   (igual a 101001)
+- 101000   (menor)
+- 100111   (menor)
 
 ---
 
 ## e) Strings sobre o alfabeto `{a, b, c}` que **não contêm** a substring `baa`
 
-> *(A definir)*
+Deseja-se definir a linguagem formada por todas as strings sobre o alfabeto  
+\(\Sigma = \{a, b, c\}\) que **não possuem** a substring proibida `baa`.
+
+Isso significa que, em nenhuma posição da string, pode ocorrer a sequência
+consecutiva de símbolos `b`, seguido de `a`, seguido de `a`.
+
+---
+
+### Estratégia de construção
+
+Para garantir que a substring `baa` nunca apareça, observamos o seguinte:
+
+- O símbolo `c` é sempre seguro, pois não participa da substring proibida.
+- Após a ocorrência de um `b`, **não podem aparecer dois `a` consecutivos**.
+- Após um `ba`, o próximo símbolo permitido é apenas `b` ou `c`
+  (um `a` geraria `baa`, o que é proibido).
+
+Assim, a expressão regular deve controlar cuidadosamente os símbolos que
+seguem um `b`.
+
+---
+
+### Expressão regular
+
+Uma expressão regular que descreve corretamente essa linguagem é:
+
+```
+(c|a|ba|b(c|b))* 
+```
+
+### Intuição da expressão
+
+- a → símbolo isolado permitido
+- c → símbolo isolado permitido
+- ba → permitido, desde que não seja seguido por outro a
+- b(c|b) → após um b, garante que não venha a em seguida
+- `*` → permite qualquer quantidade desses blocos, inclusive a string vazia
+
+Essa construção garante que a substring baa nunca ocorra.
+
+### Exemplos
+
+#### Strings válidas:
+
+- ´""´        (string vazia)
+- abc
+- bac
+- bbac
+- cabab
+
+#### Strings inválidas:
+
+- baa
+- cbaa
+- bbaa
+
+### Observação
+
+Essa linguagem é regular, pois pode ser reconhecida por um autômato finito
+que controla os últimos símbolos lidos para evitar a ocorrência da substring
+baa. Portanto, ela pode ser descrita tanto por expressões regulares quanto
+por autômatos finitos (NFA ou DFA).
 
 ---
 
