@@ -1,3 +1,4 @@
-# Questão 2 – Linguagens que não são Regulares
+# Questão  5 - Converta os NFAs para DFA.
 
-Explique por que não é surpreendente que **não exista expressão regular** que defina cada uma das linguagens a seguir.
+Para converter um NFA (Autômato Finito Não-Determinístico) em um DFA (Autômato Finito Determinístico)
+
