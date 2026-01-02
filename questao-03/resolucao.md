@@ -20,6 +20,8 @@ Em outras palavras, o autômato aceita cadeias que possuem **quatro símbolos co
 
 ## b) Autômato com alfabeto `{a}`
 
+![autômato](figuras/alternativa-b.jpeg)
+
 A linguagem reconhecida por esse autômato é composta por todas as strings da forma `aⁿ` tais que:
 
 `n ≡ 1 (mod 4)`
@@ -29,6 +31,8 @@ Ou seja, o número de símbolos `a` na string deixa **resto 1** quando dividido 
 ---
 
 ## c) Autômato com alfabeto `{0, 1}`
+
+![autômato](figuras/alternativa-c.jpeg)
 
 A linguagem reconhecida por esse autômato consiste em **strings binárias que possuem um número par de símbolos `1`**, independentemente da quantidade de símbolos `0`.
 
