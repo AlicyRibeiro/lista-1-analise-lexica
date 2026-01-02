@@ -1,7 +1,7 @@
 
 ## a) Autômato com alfabeto `{0, 1}`
 
-![autômato](figuras/alternativa-a-etapa-1.png)
+![autômato](figuras/alternativa-a.jpeg)
 
 ---
 A linguagem reconhecida por esse autômato consiste em **strings binárias que contêm uma subcadeia de 4 símbolos consecutivos** que permite a transição completa pelos estados do autômato até um estado final.
