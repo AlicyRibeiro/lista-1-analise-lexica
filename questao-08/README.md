@@ -35,7 +35,7 @@ int max (i, j) int i, j;
 ### c) Fortran 77
 
 #### Código-fonte   
-
+```
 FUNCTION MAX (I, J)
 C RETORNA O MAIOR DOS INTEIROS ENTRE I E J
     IF (I .GT. J) THEN
@@ -44,4 +44,6 @@ C RETORNA O MAIOR DOS INTEIROS ENTRE I E J
     MAX = J
     END IF
 RETURN
+
 END
+```
