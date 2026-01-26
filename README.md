@@ -63,4 +63,4 @@ O repositório está organizado da seguinte forma:
 - Ana A. Ribeiro
 - Engenharia de Computação – UFC Quixadá
 
-## ⚠️ Este repositório tem fins educacionais, sendo destinado ao estudo e à prática dos conceitos de Compiladores e Análise Léxica.
+Este repositório tem fins educacionais, sendo destinado ao estudo e à prática dos conceitos de Compiladores e Análise Léxica.
